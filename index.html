@@ -42,7 +42,7 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Drift Bottle Studio 首页">
-        <img class="brand-logo" src="/assets/logo-drift-bottle-cropped.png?v=logo-20260709b" alt="Drift Bottle Photography" />
+        <img class="brand-logo" src="/assets/logo-drift-bottle-dark.png?v=logo-20260709d" alt="Drift Bottle Photography" />
       </a>
       <nav aria-label="主导航">
         <span class="nav-indicator" aria-hidden="true"></span>
@@ -79,24 +79,29 @@
           <p>第一版先以样片位展示视觉调性；替换为大师本人高清作品后，页面会自动保持同样的排版与节奏。</p>
         </div>
         <div class="gallery" aria-label="作品集">
-          <button class="work tall" data-category="人像" data-title="Studio Portrait" style="--tone: #4c5a51; --image: url('/assets/placeholders/portrait-studio.jpg');">
+          <button class="work tall" data-category="人像" data-title="Studio Portrait" data-image="/assets/placeholders/portrait-studio.jpg" style="--tone: #4c5a51; --image: url('/assets/placeholders/portrait-studio.jpg');">
+            <img src="/assets/placeholders/portrait-studio.jpg" alt="人像摄影占位样片" loading="lazy" />
             <span>Studio Portrait</span>
             <em>CC0 placeholder</em>
           </button>
-          <button class="work" data-category="人文" data-title="Migrant Mother" style="--tone: #7a6f65; --image: url('/assets/placeholders/portrait-migrant-mother.jpg');">
+          <button class="work" data-category="家庭" data-title="Migrant Mother" data-image="/assets/placeholders/portrait-migrant-mother.jpg" style="--tone: #7a6f65; --image: url('/assets/placeholders/portrait-migrant-mother.jpg');">
+            <img src="/assets/placeholders/portrait-migrant-mother.jpg" alt="家庭纪念摄影占位样片" loading="lazy" />
             <span>Human Story</span>
             <em>Public domain</em>
           </button>
-          <button class="work wide" data-category="风景" data-title="The Tetons and the Snake River" style="--tone: #2e3b44; --image: url('/assets/placeholders/landscape-snake-river.jpg');">
+          <button class="work wide" data-category="风景" data-title="The Tetons and the Snake River" data-image="/assets/placeholders/landscape-snake-river.jpg" style="--tone: #2e3b44; --image: url('/assets/placeholders/landscape-snake-river.jpg');">
+            <img src="/assets/placeholders/landscape-snake-river.jpg" alt="风景摄影占位样片" loading="lazy" />
             <span>Grand Landscape</span>
             <em>Public domain</em>
           </button>
-          <button class="work" data-category="风景" data-title="Fog over hills" style="--tone: #645346; --image: url('/assets/placeholders/landscape-fog-hills.jpg');">
-            <span>Fog Study</span>
+          <button class="work" data-category="运动" data-title="Fog over hills" data-image="/assets/placeholders/landscape-fog-hills.jpg" style="--tone: #645346; --image: url('/assets/placeholders/landscape-fog-hills.jpg');">
+            <img src="/assets/placeholders/landscape-fog-hills.jpg" alt="运动比赛摄影占位样片" loading="lazy" />
+            <span>Action Atmosphere</span>
             <em>Public domain</em>
           </button>
-          <button class="work tall" data-category="艺术" data-title="Langston Hughes portrait" style="--tone: #1f2428; --image: url('/assets/placeholders/portrait-langston-hughes.jpg');">
-            <span>Literary Portrait</span>
+          <button class="work tall" data-category="生日派对" data-title="Langston Hughes portrait" data-image="/assets/placeholders/portrait-langston-hughes.jpg" style="--tone: #1f2428; --image: url('/assets/placeholders/portrait-langston-hughes.jpg');">
+            <img src="/assets/placeholders/portrait-langston-hughes.jpg" alt="生日 party 摄影占位样片" loading="lazy" />
+            <span>Party Portrait</span>
             <em>Public domain</em>
           </button>
         </div>
@@ -148,50 +153,35 @@
             <strong>$950 起</strong>
             <span>快速预览 / 全流程记录 / 可选当日精选</span>
           </article>
+          <article class="service">
+            <h3>生日 Party 摄影</h3>
+            <p>记录生日宴、私人派对、亲友互动、布置细节与主角肖像。</p>
+            <strong>$780 起</strong>
+            <span>2-3 小时 / 精选预览 / 可选短视频</span>
+          </article>
+          <article class="service">
+            <h3>运动比赛摄影</h3>
+            <p>适合校队比赛、马拉松、球赛、训练营和个人运动大片。</p>
+            <strong>$850 起</strong>
+            <span>高速连拍 / 动作瞬间 / 赛事组图</span>
+          </article>
+          <article class="service">
+            <h3>家庭纪念摄影</h3>
+            <p>为家庭聚会、亲子纪念、周年与代际合影留下自然影像。</p>
+            <strong>$720 起</strong>
+            <span>家庭引导 / 18 张精修 / 私密相册</span>
+          </article>
         </div>
       </section>
 
       <section id="logos" class="section logo-lab">
         <div class="section-heading">
-          <p class="eyebrow">Logo Directions</p>
-          <h2>Logo 方向备选</h2>
-          <p>先放四个方向看气质：克制、胶片、签名、画廊。你选一个方向后，我再继续精修比例、字距和应用规范。</p>
+          <p class="eyebrow">Brand Identity</p>
+          <h2>品牌标识</h2>
+          <p>当前使用黑底金色版本作为正式 logo。页眉使用缩小版，适配桌面与手机顶部导航。</p>
         </div>
-        <div class="logo-options" aria-label="Logo 备选">
-          <article class="logo-option">
-            <svg viewBox="0 0 120 84" aria-hidden="true">
-              <circle cx="42" cy="42" r="27"></circle>
-              <path d="M28 51V33h15c8 0 13 3 13 9s-5 9-13 9H28Z"></path>
-              <path d="M42 22c14 0 25 8 25 20S56 62 42 62 17 54 17 42 28 22 42 22Z"></path>
-            </svg>
-            <strong>01 / Monogram</strong>
-            <span>适合高端、克制、画廊感。</span>
-          </article>
-          <article class="logo-option">
-            <svg viewBox="0 0 120 84" aria-hidden="true">
-              <rect x="20" y="22" width="80" height="40" rx="2"></rect>
-              <circle cx="60" cy="42" r="13"></circle>
-              <path d="M30 31h12M78 31h12M30 53h12M78 53h12"></path>
-            </svg>
-            <strong>02 / Frame</strong>
-            <span>摄影属性更直观，适合品牌初期。</span>
-          </article>
-          <article class="logo-option script-logo">
-            <svg viewBox="0 0 120 84" aria-hidden="true">
-              <path d="M22 50c14-25 25-25 20-5-4 16-2 20 8 4 12-21 24-24 20-4-3 15 7 13 27-9"></path>
-              <path d="M24 59h72"></path>
-            </svg>
-            <strong>03 / Signature</strong>
-            <span>个人摄影师气质最强，偏艺术化。</span>
-          </article>
-          <article class="logo-option">
-            <svg viewBox="0 0 120 84" aria-hidden="true">
-              <path d="M25 60V24h26c21 0 44 8 44 18S72 60 51 60H25Z"></path>
-              <path d="M36 50V34h16c12 0 24 3 24 8s-12 8-24 8H36Z"></path>
-            </svg>
-            <strong>04 / Wordmark</strong>
-            <span>更现代，适合商业摄影与官网。</span>
-          </article>
+        <div class="brand-showcase">
+          <img src="/assets/logo-drift-bottle-dark.png?v=logo-20260709d" alt="Drift Bottle Photography 黑金 logo" loading="lazy" />
         </div>
       </section>
 
@@ -216,6 +206,21 @@
             <h3>商业：品牌可以被一眼记住</h3>
             <p>为品牌建立统一影像气质，适用于官网、广告、社媒和媒体资料包。</p>
           </article>
+          <article>
+            <span>04</span>
+            <h3>生日 Party：热闹但不凌乱</h3>
+            <p>适合生日宴、家庭派对和私人聚会，重点保留氛围、布置、祝福瞬间与主角状态。</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>运动比赛：速度里的表情</h3>
+            <p>用长焦和高速快门捕捉冲刺、对抗、庆祝和团队精神，适合赛事报道与个人纪念。</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>家庭纪念：自然的亲密感</h3>
+            <p>减少僵硬摆拍，用轻引导完成家庭合影、亲子互动和代际纪念。</p>
+          </article>
         </div>
       </section>
 
@@ -237,6 +242,9 @@
               <option>婚礼</option>
               <option>商业</option>
               <option>活动</option>
+              <option>生日 Party</option>
+              <option>运动比赛</option>
+              <option>家庭纪念</option>
               <option>艺术</option>
             </select>
           </label>
@@ -293,6 +301,9 @@
               <option>婚礼摄影</option>
               <option>商业摄影</option>
               <option>活动摄影</option>
+              <option>生日 Party 摄影</option>
+              <option>运动比赛摄影</option>
+              <option>家庭纪念摄影</option>
               <option>其他</option>
             </select>
           </label>
@@ -303,6 +314,40 @@
           <button class="button primary" type="submit">发送询价</button>
           <p class="form-note" id="quoteStatus" role="status"></p>
         </form>
+      </section>
+
+      <section id="social" class="section social-section">
+        <div class="section-heading">
+          <p class="eyebrow">Social Media</p>
+          <h2>社交媒体</h2>
+          <p>这里先预留 Instagram、小红书等入口和二维码位置，后续填入正式链接与二维码图片。</p>
+        </div>
+        <div class="social-grid">
+          <article class="social-card">
+            <div>
+              <span>Instagram</span>
+              <strong>@driftbottle.photo</strong>
+              <a href="#" aria-label="Instagram 链接占位">链接待添加</a>
+            </div>
+            <div class="qr-placeholder" aria-label="Instagram 二维码占位">QR</div>
+          </article>
+          <article class="social-card">
+            <div>
+              <span>小红书</span>
+              <strong>Drift Bottle Photography</strong>
+              <a href="#" aria-label="小红书链接占位">链接待添加</a>
+            </div>
+            <div class="qr-placeholder" aria-label="小红书二维码占位">QR</div>
+          </article>
+          <article class="social-card">
+            <div>
+              <span>WeChat / 微信</span>
+              <strong>预约与作品更新</strong>
+              <a href="#" aria-label="微信链接占位">二维码待添加</a>
+            </div>
+            <div class="qr-placeholder" aria-label="微信二维码占位">QR</div>
+          </article>
+        </div>
       </section>
     </main>
 
