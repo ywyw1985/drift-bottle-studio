@@ -46,15 +46,34 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 18px clamp(18px, 4vw, 54px);
-  background: linear-gradient(to bottom, rgba(17, 16, 14, 0.82), rgba(17, 16, 14, 0));
+  background: linear-gradient(to bottom, rgba(17, 16, 14, 0.9), rgba(17, 16, 14, 0.18));
+  backdrop-filter: blur(18px);
+  transition: padding 220ms ease, border-color 220ms ease, background 220ms ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-scrolled {
+  padding-block: 12px;
+  background: rgba(17, 16, 14, 0.76);
+  border-color: var(--line);
 }
 
 .brand {
-  display: grid;
-  gap: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
+}
+
+.brand span {
+  display: grid;
+  gap: 0;
+}
+
+.brand strong {
+  font-size: 0.96rem;
 }
 
 .brand small {
@@ -63,7 +82,22 @@ textarea {
   letter-spacing: 0.22em;
 }
 
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  color: var(--accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.mark-current path:first-child {
+  fill: rgba(199, 164, 106, 0.18);
+}
+
 nav {
+  position: relative;
   display: flex;
   align-items: center;
   gap: clamp(12px, 2vw, 26px);
@@ -72,7 +106,33 @@ nav {
 }
 
 nav a {
+  position: relative;
+  z-index: 1;
   padding: 8px 0;
+  transition: color 180ms ease;
+}
+
+nav a.is-active,
+nav a:hover {
+  color: var(--ink);
+}
+
+.nav-indicator {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  bottom: 2px;
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transform: translateX(var(--nav-x, 0)) scaleX(var(--nav-w, 1));
+  transform-origin: left center;
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease;
+}
+
+nav.has-indicator .nav-indicator {
+  opacity: 1;
 }
 
 .nav-cta {
@@ -107,10 +167,9 @@ nav a {
 }
 
 .hero-a {
-  background:
-    linear-gradient(135deg, rgba(18, 17, 15, 0.15), rgba(18, 17, 15, 0.5)),
-    radial-gradient(circle at 42% 30%, rgba(255, 246, 226, 0.24), transparent 18%),
-    linear-gradient(135deg, #282b2a 0%, #5f675e 48%, #171719 100%);
+  background-image:
+    linear-gradient(135deg, rgba(18, 17, 15, 0.15), rgba(18, 17, 15, 0.52)),
+    url("/assets/placeholders/hero-tetons.jpg");
 }
 
 .hero-b {
@@ -226,10 +285,30 @@ h3 {
   overflow: hidden;
   border: 0;
   color: var(--ink);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.18)),
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.72)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.3)),
+    var(--image),
     linear-gradient(135deg, var(--tone), #121212);
+  background-size: cover;
+  background-position: center;
   cursor: zoom-in;
+  isolation: isolate;
+}
+
+.work::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  transform: scale(1.03);
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), filter 650ms ease;
+}
+
+.work:hover::after {
+  transform: scale(1.09);
+  filter: contrast(1.04) brightness(1.05);
 }
 
 .work::before {
@@ -244,9 +323,18 @@ h3 {
 .work span {
   position: absolute;
   left: 18px;
-  bottom: 16px;
+  bottom: 34px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.8rem;
+}
+
+.work em {
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+  color: rgba(246, 241, 232, 0.62);
+  font-style: normal;
+  font-size: 0.78rem;
 }
 
 .work.tall {
@@ -267,6 +355,49 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
+}
+
+.logo-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.logo-option {
+  min-height: 260px;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+}
+
+.logo-option svg {
+  width: 100%;
+  height: 150px;
+  color: var(--accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.3;
+  stroke-linejoin: round;
+}
+
+.logo-option:nth-child(4) svg {
+  fill: rgba(199, 164, 106, 0.12);
+}
+
+.script-logo svg {
+  stroke-linecap: round;
+}
+
+.logo-option strong {
+  color: var(--ink);
+}
+
+.logo-option span {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .service,
@@ -389,6 +520,17 @@ summary {
   color: var(--muted);
 }
 
+.site-footer div {
+  display: grid;
+  gap: 8px;
+  text-align: right;
+}
+
+.site-footer small {
+  max-width: 520px;
+  color: rgba(187, 177, 164, 0.7);
+}
+
 dialog {
   width: min(900px, calc(100% - 28px));
   border: 1px solid var(--line);
@@ -405,7 +547,10 @@ dialog::backdrop {
   min-height: 520px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)),
+    var(--image),
     linear-gradient(135deg, var(--tone, #4c5a51), #111);
+  background-size: cover;
+  background-position: center;
 }
 
 dialog p {
@@ -428,20 +573,34 @@ dialog p {
 
 @media (max-width: 860px) {
   .site-header {
-    position: absolute;
+    position: fixed;
     display: grid;
     gap: 14px;
+    padding: 14px 18px 12px;
   }
 
   nav {
     width: 100%;
     overflow-x: auto;
     padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero {
-    min-height: 92vh;
-    padding-top: 36vh;
+    min-height: 88vh;
+    padding: 42vh 18px 52px;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 19vw, 5.8rem);
+  }
+
+  .hero-copy p:not(.eyebrow) {
+    font-size: 0.98rem;
   }
 
   .gallery,
@@ -450,7 +609,8 @@ dialog p {
   .split,
   .form,
   .form.compact,
-  .uploaded-preview {
+  .uploaded-preview,
+  .logo-options {
     grid-template-columns: 1fr;
   }
 
@@ -464,5 +624,9 @@ dialog p {
 
   .site-footer {
     display: grid;
+  }
+
+  .site-footer div {
+    text-align: left;
   }
 }

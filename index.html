@@ -42,13 +42,21 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Drift Bottle Studio 首页">
-        <span>Drift Bottle</span>
-        <small>Studio</small>
+        <svg class="brand-mark mark-current" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M16 44V20h15c10 0 17 4 17 12S41 44 31 44H16Zm8-7h7c5 0 8-2 8-5s-3-5-8-5h-7v10Z" />
+          <path d="M32 12c12 0 22 7 22 20S44 52 32 52 10 45 10 32 20 12 32 12Zm0 7c-8 0-14 4-14 13s6 13 14 13 14-4 14-13-6-13-14-13Z" />
+        </svg>
+        <span>
+          <strong>Drift Bottle</strong>
+          <small>Studio</small>
+        </span>
       </a>
       <nav aria-label="主导航">
+        <span class="nav-indicator" aria-hidden="true"></span>
         <a href="#portfolio">作品</a>
         <a href="#about">简介</a>
         <a href="#services">服务</a>
+        <a href="#logos">Logo</a>
         <a href="#faq">问答</a>
         <a class="nav-cta" href="#inquiry">询价</a>
       </nav>
@@ -56,7 +64,7 @@
 
     <main id="top">
       <section class="hero" aria-label="摄影作品首屏">
-        <div class="hero-media hero-a"></div>
+        <div class="hero-media hero-a" role="img" aria-label="公共领域黑白风景摄影，占位展示艺术氛围"></div>
         <div class="hero-media hero-b"></div>
         <div class="hero-copy">
           <p class="eyebrow">Portraits / Wedding / Commercial</p>
@@ -78,20 +86,25 @@
           <p>第一版先以样片位展示视觉调性；替换为大师本人高清作品后，页面会自动保持同样的排版与节奏。</p>
         </div>
         <div class="gallery" aria-label="作品集">
-          <button class="work tall" data-category="人像" style="--tone: #4c5a51">
-            <span>Editorial Portrait</span>
+          <button class="work tall" data-category="人像" data-title="Studio Portrait" style="--tone: #4c5a51; --image: url('/assets/placeholders/portrait-studio.jpg');">
+            <span>Studio Portrait</span>
+            <em>CC0 placeholder</em>
           </button>
-          <button class="work" data-category="婚礼" style="--tone: #7a6f65">
-            <span>Quiet Wedding</span>
+          <button class="work" data-category="人文" data-title="Migrant Mother" style="--tone: #7a6f65; --image: url('/assets/placeholders/portrait-migrant-mother.jpg');">
+            <span>Human Story</span>
+            <em>Public domain</em>
           </button>
-          <button class="work wide" data-category="商业" style="--tone: #2e3b44">
-            <span>Brand Campaign</span>
+          <button class="work wide" data-category="风景" data-title="The Tetons and the Snake River" style="--tone: #2e3b44; --image: url('/assets/placeholders/landscape-snake-river.jpg');">
+            <span>Grand Landscape</span>
+            <em>Public domain</em>
           </button>
-          <button class="work" data-category="活动" style="--tone: #645346">
-            <span>Private Event</span>
+          <button class="work" data-category="风景" data-title="Fog over hills" style="--tone: #645346; --image: url('/assets/placeholders/landscape-fog-hills.jpg');">
+            <span>Fog Study</span>
+            <em>Public domain</em>
           </button>
-          <button class="work tall" data-category="艺术" style="--tone: #1f2428">
-            <span>Fine Art Study</span>
+          <button class="work tall" data-category="艺术" data-title="Langston Hughes portrait" style="--tone: #1f2428; --image: url('/assets/placeholders/portrait-langston-hughes.jpg');">
+            <span>Literary Portrait</span>
+            <em>Public domain</em>
           </button>
         </div>
       </section>
@@ -141,6 +154,50 @@
             <p>适合发布会、私宴、展览、企业活动和高端社交场景。</p>
             <strong>$950 起</strong>
             <span>快速预览 / 全流程记录 / 可选当日精选</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="logos" class="section logo-lab">
+        <div class="section-heading">
+          <p class="eyebrow">Logo Directions</p>
+          <h2>Logo 方向备选</h2>
+          <p>先放四个方向看气质：克制、胶片、签名、画廊。你选一个方向后，我再继续精修比例、字距和应用规范。</p>
+        </div>
+        <div class="logo-options" aria-label="Logo 备选">
+          <article class="logo-option">
+            <svg viewBox="0 0 120 84" aria-hidden="true">
+              <circle cx="42" cy="42" r="27"></circle>
+              <path d="M28 51V33h15c8 0 13 3 13 9s-5 9-13 9H28Z"></path>
+              <path d="M42 22c14 0 25 8 25 20S56 62 42 62 17 54 17 42 28 22 42 22Z"></path>
+            </svg>
+            <strong>01 / Monogram</strong>
+            <span>适合高端、克制、画廊感。</span>
+          </article>
+          <article class="logo-option">
+            <svg viewBox="0 0 120 84" aria-hidden="true">
+              <rect x="20" y="22" width="80" height="40" rx="2"></rect>
+              <circle cx="60" cy="42" r="13"></circle>
+              <path d="M30 31h12M78 31h12M30 53h12M78 53h12"></path>
+            </svg>
+            <strong>02 / Frame</strong>
+            <span>摄影属性更直观，适合品牌初期。</span>
+          </article>
+          <article class="logo-option script-logo">
+            <svg viewBox="0 0 120 84" aria-hidden="true">
+              <path d="M22 50c14-25 25-25 20-5-4 16-2 20 8 4 12-21 24-24 20-4-3 15 7 13 27-9"></path>
+              <path d="M24 59h72"></path>
+            </svg>
+            <strong>03 / Signature</strong>
+            <span>个人摄影师气质最强，偏艺术化。</span>
+          </article>
+          <article class="logo-option">
+            <svg viewBox="0 0 120 84" aria-hidden="true">
+              <path d="M25 60V24h26c21 0 44 8 44 18S72 60 51 60H25Z"></path>
+              <path d="M36 50V34h16c12 0 24 3 24 8s-12 8-24 8H36Z"></path>
+            </svg>
+            <strong>04 / Wordmark</strong>
+            <span>更现代，适合商业摄影与官网。</span>
           </article>
         </div>
       </section>
@@ -258,7 +315,10 @@
 
     <footer class="site-footer">
       <p>Drift Bottle Studio</p>
-      <a href="mailto:hello@driftbottlestudio.com">hello@driftbottlestudio.com</a>
+      <div>
+        <a href="mailto:hello@driftbottlestudio.com">hello@driftbottlestudio.com</a>
+        <small>占位图来自 Wikimedia Commons Public Domain / CC0，后续替换为摄影师本人作品。</small>
+      </div>
     </footer>
 
     <dialog id="lightbox">
