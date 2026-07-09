@@ -21,10 +21,12 @@ export async function onRequestPost({ request, env }) {
   if (!env.RESEND_API_KEY || !env.INQUIRY_TO_EMAIL || !env.RESEND_FROM_EMAIL) {
     return json(
       {
+        ok: true,
+        emailPending: true,
         message:
-          "Email is not configured. Set RESEND_API_KEY, RESEND_FROM_EMAIL, and INQUIRY_TO_EMAIL in Cloudflare Pages.",
+          "询价板块已预留；邮件通知会在 Resend API 配置后启用。当前请直接发送邮件到 hello@driftbottlestudio.com。",
       },
-      503,
+      202,
     );
   }
 

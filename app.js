@@ -29,8 +29,8 @@ quoteForm.addEventListener("submit", async (event) => {
     });
     const result = await response.json();
     if (!response.ok) throw new Error(result.message || "发送失败");
-    quoteStatus.textContent = "已收到询价，我们会尽快邮件回复。";
-    quoteForm.reset();
+    quoteStatus.textContent = result.message || "已收到询价，我们会尽快邮件回复。";
+    if (!result.emailPending) quoteForm.reset();
   } catch (error) {
     quoteStatus.textContent = `暂未发送成功：${error.message}`;
   }
