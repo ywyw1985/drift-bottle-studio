@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://driftbottlestudio.com/sitemap.xml

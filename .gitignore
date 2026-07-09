@@ -1,0 +1,4 @@
+.seo-cache/
+.wrangler/
+node_modules/
+dist/

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Drift Bottle Studio">
+  <rect width="1200" height="630" fill="#11100e"/>
+  <rect x="72" y="72" width="1056" height="486" fill="#1b1916" stroke="#c7a46a" stroke-opacity=".45"/>
+  <circle cx="790" cy="255" r="150" fill="#84917f" opacity=".55"/>
+  <path d="M170 430h510" stroke="#f6f1e8" stroke-width="2" opacity=".35"/>
+  <text x="166" y="255" fill="#f6f1e8" font-family="Georgia, serif" font-size="76">Drift Bottle</text>
+  <text x="172" y="326" fill="#c7a46a" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">STUDIO</text>
+  <text x="172" y="382" fill="#bbb1a4" font-family="Arial, sans-serif" font-size="26">Portraits / Wedding / Commercial Photography</text>
+</svg>
