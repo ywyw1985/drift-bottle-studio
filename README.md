@@ -7,9 +7,9 @@
 - 高端简约首页与高清作品展示区
 - 摄影师简介、服务列表与价格
 - 摄影服务说明、样片位、客户 FAQ
-- 询价表单，Cloudflare Pages Function 调用 Resend 发邮件
-- 管理上传入口，支持本地预览；配置 Cloudflare Images 后可持久上传
-- 基础 SEO：标题描述、canonical、OG、robots、sitemap、ProfessionalService schema
+- 询价表单，先保留入口；配置 Resend 后再启用邮件通知
+- 管理上传接口保留在后端，公开网站不展示上传入口
+- 基础 SEO：标题描述、canonical、OG、robots、图片 sitemap、ProfessionalService 与 FAQ schema
 
 ## Cloudflare Pages 环境变量
 
