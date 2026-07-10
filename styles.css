@@ -75,9 +75,9 @@ textarea {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 46px;
-  height: 34px;
-  padding: 2px;
+  width: 88px;
+  height: 36px;
+  padding: 3px 6px;
   overflow: hidden;
   border: 1px solid rgba(199, 164, 106, 0.22);
   background: #070706;
@@ -88,8 +88,8 @@ textarea {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
+  object-fit: contain;
+  object-position: center;
 }
 
 nav {
@@ -680,9 +680,9 @@ dialog p {
   }
 
   .brand {
-    width: 42px;
+    width: 82px;
     height: 32px;
-    padding: 2px;
+    padding: 3px 6px;
   }
 
   nav {
