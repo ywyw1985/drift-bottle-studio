@@ -45,7 +45,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px clamp(18px, 4vw, 54px);
+  padding: 12px clamp(18px, 4vw, 54px);
   background: linear-gradient(to bottom, rgba(17, 16, 14, 0.9), rgba(17, 16, 14, 0.18));
   backdrop-filter: blur(18px);
   transition: padding 220ms ease, border-color 220ms ease, background 220ms ease;
@@ -53,7 +53,7 @@ textarea {
 }
 
 .site-header.is-scrolled {
-  padding-block: 12px;
+  padding-block: 9px;
   background: rgba(17, 16, 14, 0.76);
   border-color: var(--line);
 }
@@ -62,20 +62,22 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 76px;
-  height: 56px;
-  padding: 3px;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 34px;
+  padding: 2px;
   overflow: hidden;
-  border: 1px solid rgba(199, 164, 106, 0.26);
+  border: 1px solid rgba(199, 164, 106, 0.22);
   background: #070706;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
 }
 
 .brand-logo {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 nav {
@@ -91,6 +93,7 @@ nav a {
   position: relative;
   z-index: 1;
   padding: 8px 0;
+  white-space: nowrap;
   transition: color 180ms ease;
 }
 
@@ -401,7 +404,6 @@ h3 {
   font-weight: 800;
 }
 
-.upload-panel,
 .inquiry {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent);
 }
@@ -607,9 +609,9 @@ dialog p {
   }
 
   .brand {
-    width: 62px;
-    height: 48px;
-    padding: 3px;
+    width: 42px;
+    height: 32px;
+    padding: 2px;
   }
 
   nav {

@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://driftbottlestudio.com/</loc>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://driftbottlestudio.com/assets/placeholders/portrait-studio.jpg</image:loc>
+      <image:title>高端人像摄影样片</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://driftbottlestudio.com/assets/placeholders/wedding-japan-1889.jpg</image:loc>
+      <image:title>婚礼摄影样片</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://driftbottlestudio.com/assets/placeholders/birthday-party-loc.jpg</image:loc>
+      <image:title>生日 Party 摄影样片</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://driftbottlestudio.com/assets/placeholders/sports-baseball-game.jpg</image:loc>
+      <image:title>运动比赛摄影样片</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://driftbottlestudio.com/assets/placeholders/family-portrait.jpg</image:loc>
+      <image:title>家庭纪念摄影样片</image:title>
+    </image:image>
   </url>
 </urlset>

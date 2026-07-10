@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Drift Bottle Studio | 高端人像、婚礼与商业摄影</title>
+    <title>Drift Bottle Studio | 高端人像、婚礼、生日派对与家庭摄影</title>
     <meta
       name="description"
-      content="Drift Bottle Studio 提供高端人像摄影、婚礼跟拍、商业影像与活动摄影服务。浏览高清作品集、服务价格、常见问答并提交询价。"
+      content="Drift Bottle Studio 提供高端人像、婚礼、商业、活动、生日 Party、运动比赛与家庭纪念摄影服务。浏览高清作品集、服务价格、常见问答并提交询价。"
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#11100e" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Drift Bottle Studio | 高端摄影作品集" />
     <meta
       property="og:description"
-      content="以摄影师高清作品为主角的人像、婚礼、商业与活动摄影官网。"
+      content="以摄影师高清作品为主角的人像、婚礼、商业、活动、生日 Party、运动比赛与家庭纪念摄影官网。"
     />
     <meta property="og:url" content="https://driftbottlestudio.com/" />
     <meta property="og:image" content="https://driftbottlestudio.com/assets/og.svg" />
@@ -27,14 +27,50 @@
         "name": "Drift Bottle Studio",
         "url": "https://driftbottlestudio.com/",
         "image": "https://driftbottlestudio.com/assets/og.svg",
-        "description": "高端人像、婚礼、商业与活动摄影服务。",
+        "description": "高端人像、婚礼、商业、活动、生日 Party、运动比赛与家庭纪念摄影服务。",
         "priceRange": "$$",
         "areaServed": ["New York", "New Jersey", "United States"],
         "sameAs": [],
         "makesOffer": [
           { "@type": "Offer", "name": "人像摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 680 } },
           { "@type": "Offer", "name": "婚礼摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 1800 } },
-          { "@type": "Offer", "name": "商业摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 1200 } }
+          { "@type": "Offer", "name": "商业摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 1200 } },
+          { "@type": "Offer", "name": "活动摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 950 } },
+          { "@type": "Offer", "name": "生日 Party 摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 780 } },
+          { "@type": "Offer", "name": "运动比赛摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 850 } },
+          { "@type": "Offer", "name": "家庭纪念摄影", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "minPrice": 720 } }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "多久可以交片？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "精选预览通常 3-5 个工作日内提供，完整精修一般 2-4 周交付，具体随项目体量确认。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "是否可以异地拍摄？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。纽约、新泽西外的拍摄会根据交通、住宿和时间安排单独报价。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "如何预约档期？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "提交询价表单后，摄影师会回复拍摄建议、报价与可选档期。确认后支付定金锁定时间。"
+            }
+          }
         ]
       }
     </script>
@@ -47,9 +83,8 @@
       <nav aria-label="主导航">
         <span class="nav-indicator" aria-hidden="true"></span>
         <a href="#portfolio">作品</a>
-        <a href="#about">简介</a>
+        <a href="#about">摄影师简介</a>
         <a href="#services">服务</a>
-        <a href="#logos">Logo</a>
         <a href="#faq">问答</a>
         <a class="nav-cta" href="#inquiry">询价</a>
       </nav>
@@ -79,29 +114,39 @@
           <p>第一版先以样片位展示视觉调性；替换为大师本人高清作品后，页面会自动保持同样的排版与节奏。</p>
         </div>
         <div class="gallery" aria-label="作品集">
-          <button class="work tall" data-category="人像" data-title="Studio Portrait" data-image="/assets/placeholders/portrait-studio.jpg" style="--tone: #4c5a51; --image: url('/assets/placeholders/portrait-studio.jpg');">
-            <img src="/assets/placeholders/portrait-studio.jpg" alt="人像摄影占位样片" loading="lazy" />
+          <button class="work tall" data-category="人像摄影" data-title="Studio Portrait" data-image="/assets/placeholders/portrait-studio.jpg" style="--tone: #4c5a51; --image: url('/assets/placeholders/portrait-studio.jpg');">
+            <img src="/assets/placeholders/portrait-studio.jpg" alt="高端人像摄影占位样片，室内肖像作品" loading="lazy" />
             <span>Studio Portrait</span>
-            <em>CC0 placeholder</em>
+            <em>Portrait sample</em>
           </button>
-          <button class="work" data-category="家庭" data-title="Migrant Mother" data-image="/assets/placeholders/portrait-migrant-mother.jpg" style="--tone: #7a6f65; --image: url('/assets/placeholders/portrait-migrant-mother.jpg');">
-            <img src="/assets/placeholders/portrait-migrant-mother.jpg" alt="家庭纪念摄影占位样片" loading="lazy" />
-            <span>Human Story</span>
+          <button class="work wide" data-category="婚礼摄影" data-title="Wedding in Japan" data-image="/assets/placeholders/wedding-japan-1889.jpg" style="--tone: #7a6f65; --image: url('/assets/placeholders/wedding-japan-1889.jpg');">
+            <img src="/assets/placeholders/wedding-japan-1889.jpg" alt="婚礼摄影占位样片，经典新人与仪式画面" loading="lazy" />
+            <span>Wedding Story</span>
             <em>Public domain</em>
           </button>
-          <button class="work wide" data-category="风景" data-title="The Tetons and the Snake River" data-image="/assets/placeholders/landscape-snake-river.jpg" style="--tone: #2e3b44; --image: url('/assets/placeholders/landscape-snake-river.jpg');">
-            <img src="/assets/placeholders/landscape-snake-river.jpg" alt="风景摄影占位样片" loading="lazy" />
-            <span>Grand Landscape</span>
+          <button class="work" data-category="商业摄影" data-title="Visual Campaign" data-image="/assets/placeholders/landscape-snake-river.jpg" style="--tone: #2e3b44; --image: url('/assets/placeholders/landscape-snake-river.jpg');">
+            <img src="/assets/placeholders/landscape-snake-river.jpg" alt="商业摄影占位样片，品牌视觉氛围图" loading="lazy" />
+            <span>Brand Mood</span>
             <em>Public domain</em>
           </button>
-          <button class="work" data-category="运动" data-title="Fog over hills" data-image="/assets/placeholders/landscape-fog-hills.jpg" style="--tone: #645346; --image: url('/assets/placeholders/landscape-fog-hills.jpg');">
-            <img src="/assets/placeholders/landscape-fog-hills.jpg" alt="运动比赛摄影占位样片" loading="lazy" />
-            <span>Action Atmosphere</span>
+          <button class="work" data-category="活动摄影" data-title="Event Atmosphere" data-image="/assets/placeholders/portrait-migrant-mother.jpg" style="--tone: #645346; --image: url('/assets/placeholders/portrait-migrant-mother.jpg');">
+            <img src="/assets/placeholders/portrait-migrant-mother.jpg" alt="活动摄影占位样片，人物互动与现场氛围" loading="lazy" />
+            <span>Event Mood</span>
             <em>Public domain</em>
           </button>
-          <button class="work tall" data-category="生日派对" data-title="Langston Hughes portrait" data-image="/assets/placeholders/portrait-langston-hughes.jpg" style="--tone: #1f2428; --image: url('/assets/placeholders/portrait-langston-hughes.jpg');">
-            <img src="/assets/placeholders/portrait-langston-hughes.jpg" alt="生日 party 摄影占位样片" loading="lazy" />
+          <button class="work tall" data-category="生日 Party 摄影" data-title="Birthday Party" data-image="/assets/placeholders/birthday-party-loc.jpg" style="--tone: #1f2428; --image: url('/assets/placeholders/birthday-party-loc.jpg');">
+            <img src="/assets/placeholders/birthday-party-loc.jpg" alt="生日 Party 摄影占位样片，派对人物与庆祝场景" loading="lazy" />
             <span>Party Portrait</span>
+            <em>Public domain</em>
+          </button>
+          <button class="work wide" data-category="运动比赛摄影" data-title="Baseball Game" data-image="/assets/placeholders/sports-baseball-game.jpg" style="--tone: #37413d; --image: url('/assets/placeholders/sports-baseball-game.jpg');">
+            <img src="/assets/placeholders/sports-baseball-game.jpg" alt="运动比赛摄影占位样片，球赛现场动作画面" loading="lazy" />
+            <span>Game Motion</span>
+            <em>Public domain</em>
+          </button>
+          <button class="work" data-category="家庭纪念摄影" data-title="Family Portrait" data-image="/assets/placeholders/family-portrait.jpg" style="--tone: #66584a; --image: url('/assets/placeholders/family-portrait.jpg');">
+            <img src="/assets/placeholders/family-portrait.jpg" alt="家庭纪念摄影占位样片，家庭合影与亲密关系" loading="lazy" />
+            <span>Family Memory</span>
             <em>Public domain</em>
           </button>
         </div>
@@ -174,17 +219,6 @@
         </div>
       </section>
 
-      <section id="logos" class="section logo-lab">
-        <div class="section-heading">
-          <p class="eyebrow">Brand Identity</p>
-          <h2>品牌标识</h2>
-          <p>当前使用黑底金色版本作为正式 logo。页眉使用缩小版，适配桌面与手机顶部导航。</p>
-        </div>
-        <div class="brand-showcase">
-          <img src="/assets/logo-drift-bottle-dark.png?v=logo-20260709d" alt="Drift Bottle Photography 黑金 logo" loading="lazy" />
-        </div>
-      </section>
-
       <section class="section sample-types">
         <div class="section-heading">
           <p class="eyebrow">Sample Stories</p>
@@ -224,40 +258,6 @@
         </div>
       </section>
 
-      <section id="upload" class="section upload-panel">
-        <div class="section-heading">
-          <p class="eyebrow">Admin Upload</p>
-          <h2>作品上传</h2>
-          <p>第一版提供管理员上传入口。配置 Cloudflare Images Token 后，图片可上传到云端；本地预览会先显示在页面中。</p>
-        </div>
-        <form id="uploadForm" class="form compact">
-          <label>
-            作品标题
-            <input name="title" placeholder="例如：雨后肖像" required />
-          </label>
-          <label>
-            分类
-            <select name="category">
-              <option>人像</option>
-              <option>婚礼</option>
-              <option>商业</option>
-              <option>活动</option>
-              <option>生日 Party</option>
-              <option>运动比赛</option>
-              <option>家庭纪念</option>
-              <option>艺术</option>
-            </select>
-          </label>
-          <label>
-            图片
-            <input name="image" type="file" accept="image/*" required />
-          </label>
-          <button class="button primary" type="submit">上传作品</button>
-          <p class="form-note" id="uploadStatus" role="status"></p>
-        </form>
-        <div id="uploadedPreview" class="uploaded-preview" aria-live="polite"></div>
-      </section>
-
       <section id="faq" class="section faq">
         <div class="section-heading">
           <p class="eyebrow">Client Q&A</p>
@@ -287,7 +287,7 @@
         <div class="section-heading">
           <p class="eyebrow">Inquiry</p>
           <h2>询价与联系</h2>
-          <p>填写后会通过 Resend 邮件通知摄影师，并给客户发送确认邮件。</p>
+          <p>这里先保留询价入口。邮件通知模块等 Resend API Key 准备好后再接入。</p>
         </div>
         <form id="quoteForm" class="form">
           <label>姓名 <input name="name" autocomplete="name" required /></label>
