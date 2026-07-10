@@ -5,6 +5,27 @@ const header = document.querySelector(".site-header");
 const nav = document.querySelector("nav");
 const navLinks = Array.from(document.querySelectorAll("nav a"));
 const navIndicator = document.querySelector(".nav-indicator");
+const pageLang = document.documentElement.lang || "zh-CN";
+const formMessages = pageLang.startsWith("en")
+  ? {
+      sending: "Sending...",
+      failed: "Could not send yet:",
+      fallbackError: "Send failed",
+      success: "Inquiry received. We will reply by email soon.",
+    }
+  : pageLang.toLowerCase().includes("hant")
+    ? {
+        sending: "正在發送...",
+        failed: "暫未發送成功：",
+        fallbackError: "發送失敗",
+        success: "已收到詢價，我們會盡快郵件回覆。",
+      }
+    : {
+        sending: "正在发送...",
+        failed: "暂未发送成功：",
+        fallbackError: "发送失败",
+        success: "已收到询价，我们会尽快邮件回复。",
+      };
 
 document.querySelectorAll(".work, .story-card").forEach((item) => {
   item.addEventListener("click", () => {
@@ -102,7 +123,7 @@ window.addEventListener("load", updateActiveNavFromScroll);
 
 quoteForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  quoteStatus.textContent = "正在发送...";
+  quoteStatus.textContent = formMessages.sending;
   const payload = Object.fromEntries(new FormData(quoteForm).entries());
 
   try {
@@ -112,11 +133,11 @@ quoteForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(payload),
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.message || "发送失败");
-    quoteStatus.textContent = result.message || "已收到询价，我们会尽快邮件回复。";
+    if (!response.ok) throw new Error(result.message || formMessages.fallbackError);
+    quoteStatus.textContent = result.message || formMessages.success;
     if (!result.emailPending) quoteForm.reset();
   } catch (error) {
-    quoteStatus.textContent = `暂未发送成功：${error.message}`;
+    quoteStatus.textContent = `${formMessages.failed}${error.message}`;
   }
 });
 

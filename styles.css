@@ -85,6 +85,13 @@ textarea {
   line-height: 0;
 }
 
+.brand-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
 .brand-logo {
   display: block;
   width: 66px;
@@ -92,6 +99,32 @@ textarea {
   object-fit: contain;
   object-position: center;
   filter: none;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-switcher a {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid rgba(246, 241, 232, 0.18);
+  color: rgba(246, 241, 232, 0.66);
+  font-size: 0.74rem;
+  letter-spacing: 0;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a.is-current {
+  border-color: rgba(199, 164, 106, 0.56);
+  background: rgba(199, 164, 106, 0.12);
+  color: var(--ink);
 }
 
 nav {
@@ -742,6 +775,16 @@ dialog p {
 
   .brand-logo {
     width: 62px;
+  }
+
+  .brand-tools {
+    gap: 10px;
+  }
+
+  .language-switcher a {
+    min-width: 28px;
+    height: 26px;
+    padding-inline: 6px;
   }
 
   nav {
