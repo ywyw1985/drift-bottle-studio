@@ -71,23 +71,27 @@ textarea {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   flex: 0 0 auto;
-  width: 78px;
-  height: 44px;
+  justify-self: start;
+  align-self: center;
+  width: fit-content;
+  height: auto;
   padding: 0;
   overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  line-height: 0;
 }
 
 .brand-logo {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 66px;
+  height: auto;
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.34));
+  filter: none;
 }
 
 nav {
@@ -678,9 +682,13 @@ dialog p {
   }
 
   .brand {
-    width: 70px;
-    height: 40px;
+    width: fit-content;
+    height: auto;
     padding: 0;
+  }
+
+  .brand-logo {
+    width: 62px;
   }
 
   nav {
