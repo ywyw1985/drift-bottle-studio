@@ -6,7 +6,7 @@ const nav = document.querySelector("nav");
 const navLinks = Array.from(document.querySelectorAll("nav a"));
 const navIndicator = document.querySelector(".nav-indicator");
 
-document.querySelectorAll(".work").forEach((item) => {
+document.querySelectorAll(".work, .story-card").forEach((item) => {
   item.addEventListener("click", () => {
     const tone = item.style.getPropertyValue("--tone");
     const gallery = (item.dataset.gallery || item.dataset.image || "")
@@ -45,6 +45,9 @@ function setLightboxImage(url) {
 const sectionMap = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const sectionsByTop = sectionMap
+  .map((section) => ({ section, id: section.id }))
+  .filter(({ id }) => id);
 
 function moveIndicator(target) {
   if (!target || !navIndicator) return;
@@ -77,22 +80,25 @@ if (nav) {
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible) setActiveNav(visible.target.id);
-  },
-  { rootMargin: "-38% 0px -48% 0px", threshold: [0.15, 0.35, 0.6] },
-);
+function updateActiveNavFromScroll() {
+  const probe = window.scrollY + Math.min(window.innerHeight * 0.42, 360);
+  let current = sectionsByTop[0]?.id || "portfolio";
+  sectionsByTop.forEach(({ section, id }) => {
+    if (section.offsetTop <= probe) current = id;
+  });
+  setActiveNav(current);
+}
 
-sectionMap.forEach((section) => observer.observe(section));
-setActiveNav("portfolio");
+updateActiveNavFromScroll();
+requestAnimationFrame(updateActiveNavFromScroll);
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+  updateActiveNavFromScroll();
 });
+
+window.addEventListener("resize", updateActiveNavFromScroll);
+window.addEventListener("load", updateActiveNavFromScroll);
 
 quoteForm.addEventListener("submit", async (event) => {
   event.preventDefault();

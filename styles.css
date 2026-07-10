@@ -421,10 +421,39 @@ h3 {
 }
 
 .service,
-.story-list article {
+.story-card {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, rgba(17, 16, 14, 0.18), rgba(17, 16, 14, 0.88)),
+    var(--image),
+    linear-gradient(135deg, var(--panel), #11100e);
+  background-size: cover;
+  background-position: center;
   padding: 24px;
+  min-height: 230px;
+  isolation: isolate;
+}
+
+.service::before,
+.story-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08));
+}
+
+.service h3,
+.service p,
+.service strong,
+.service span,
+.story-card span,
+.story-card h3,
+.story-card em {
+  position: relative;
+  z-index: 1;
 }
 
 .service strong {
@@ -445,9 +474,33 @@ h3 {
   gap: 14px;
 }
 
-.story-list span {
+.story-card {
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  width: 100%;
+  color: var(--ink);
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.story-card span {
   color: var(--accent-2);
   font-weight: 800;
+}
+
+.story-card h3 {
+  margin: auto 0 10px;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+}
+
+.story-card em {
+  color: rgba(246, 241, 232, 0.72);
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .inquiry {
