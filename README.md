@@ -8,7 +8,7 @@
 - 摄影师简介、服务列表与价格
 - 摄影服务说明、样片位、客户 FAQ
 - 询价表单，先保留入口；配置 Resend 后再启用邮件通知
-- 管理上传接口保留在后端，公开网站不展示上传入口
+- 作品上传不在公开网站提供；后续应做独立管理员后台并加入鉴权
 - 基础 SEO：标题描述、canonical、OG、robots、图片 sitemap、ProfessionalService 与 FAQ schema
 
 ## Cloudflare Pages 环境变量
@@ -18,11 +18,6 @@
 - `RESEND_API_KEY`
 - `RESEND_FROM_EMAIL`
 - `INQUIRY_TO_EMAIL`
-
-作品上传：
-
-- `CLOUDFLARE_ACCOUNT_ID`
-- `CLOUDFLARE_IMAGES_TOKEN`
 
 ## 部署
 

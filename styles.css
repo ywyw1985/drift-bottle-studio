@@ -120,10 +120,6 @@ nav.has-indicator .nav-indicator {
   opacity: 1;
 }
 
-.nav-cta {
-  color: var(--ink);
-}
-
 .hero {
   position: relative;
   min-height: 94vh;
