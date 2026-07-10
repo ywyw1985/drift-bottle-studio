@@ -1,0 +1,3 @@
+/api/upload /404.html 404
+/api/upload/* /404.html 404
+/assets/placeholders/portrait-studio.jpg /404.html 404
