@@ -68,11 +68,12 @@
     </image:image>
   </url>
   <url>
-    <loc>https://driftbottlestudio.com/zh-cn.html</loc>
+    <loc>https://driftbottlestudio.com/zh-cn</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://driftbottlestudio.com/zh-hant.html</loc>
+    <loc>https://driftbottlestudio.com/zh-hant</loc>
     <priority>0.9</priority>
   </url></urlset>
+
 
