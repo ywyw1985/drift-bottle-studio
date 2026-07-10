@@ -7,24 +7,64 @@
     <loc>https://driftbottlestudio.com/</loc>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://driftbottlestudio.com/assets/placeholders/portrait-langston-hughes.jpg</image:loc>
-      <image:title>高端人像摄影编辑肖像样片</image:title>
+      <image:loc>https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>高端人像摄影封面</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://driftbottlestudio.com/assets/placeholders/wedding-japan-1889.jpg</image:loc>
-      <image:title>婚礼摄影样片</image:title>
+      <image:loc>https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>现代婚礼摄影封面</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://driftbottlestudio.com/assets/placeholders/birthday-party-loc.jpg</image:loc>
-      <image:title>生日 Party 摄影样片</image:title>
+      <image:loc>https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>生日 Party 摄影封面</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://driftbottlestudio.com/assets/placeholders/sports-baseball-game.jpg</image:loc>
-      <image:title>运动比赛摄影样片</image:title>
+      <image:loc>https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>运动比赛摄影封面</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://driftbottlestudio.com/assets/placeholders/family-portrait.jpg</image:loc>
-      <image:title>家庭纪念摄影样片</image:title>
+      <image:loc>https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>家庭纪念摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>商业摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>产品摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>餐饮摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>空间摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>毕业摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>现场活动摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>旅行风景摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>街头纪实摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>母婴亲子摄影封面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800</image:loc>
+      <image:title>创意色彩摄影封面</image:title>
     </image:image>
   </url>
 </urlset>

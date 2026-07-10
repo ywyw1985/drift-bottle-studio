@@ -9,15 +9,38 @@ const navIndicator = document.querySelector(".nav-indicator");
 document.querySelectorAll(".work").forEach((item) => {
   item.addEventListener("click", () => {
     const tone = item.style.getPropertyValue("--tone");
-    const image = item.style.getPropertyValue("--image");
-    lightbox.querySelector(".lightbox-art").style.setProperty("--tone", tone);
-    lightbox.querySelector(".lightbox-art").style.setProperty("--image", image);
+    const gallery = (item.dataset.gallery || item.dataset.image || "")
+      .split("|")
+      .map((url) => url.trim())
+      .filter(Boolean);
+    const images = gallery.length ? gallery : [item.dataset.image];
+    const lightboxArt = lightbox.querySelector(".lightbox-art");
+    const strip = lightbox.querySelector(".lightbox-strip");
+    lightboxArt.style.setProperty("--tone", tone);
+    setLightboxImage(images[0]);
     lightbox.querySelector("p").textContent = `${item.dataset.category} / ${item.dataset.title || item.textContent.trim()}`;
+    strip.innerHTML = "";
+    images.forEach((url, index) => {
+      const thumb = document.createElement("button");
+      thumb.type = "button";
+      thumb.className = index === 0 ? "is-selected" : "";
+      thumb.style.backgroundImage = `url("${url}")`;
+      thumb.setAttribute("aria-label", `${item.dataset.category} 样片 ${index + 1}`);
+      thumb.addEventListener("click", () => {
+        strip.querySelectorAll("button").forEach((button) => button.classList.toggle("is-selected", button === thumb));
+        setLightboxImage(url);
+      });
+      strip.append(thumb);
+    });
     lightbox.showModal();
   });
 });
 
 document.querySelector(".close").addEventListener("click", () => lightbox.close());
+
+function setLightboxImage(url) {
+  lightbox.querySelector(".lightbox-art").style.setProperty("--image", `url("${url}")`);
+}
 
 const sectionMap = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))

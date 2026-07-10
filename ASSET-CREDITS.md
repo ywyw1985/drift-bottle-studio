@@ -2,6 +2,8 @@
 
 These are temporary visual placeholders for Drift Bottle Studio. They should be replaced with the photographer's own work when available.
 
+The modern color portfolio covers use temporary Pexels images under the Pexels License. Pexels photos are free to use and attribution is not required, but these should still be replaced with the photographer's own commissioned work before final launch.
+
 - `assets/placeholders/hero-tetons.jpg` - Ansel Adams, National Archives 79-AA-G01, Wikimedia Commons, public domain / U.S. National Park Service.
 - `assets/placeholders/portrait-migrant-mother.jpg` - Dorothea Lange, Migrant Mother, Wikimedia Commons / Library of Congress, public domain.
 - `assets/placeholders/landscape-snake-river.jpg` - Ansel Adams, The Tetons and the Snake River, Wikimedia Commons, public domain.
