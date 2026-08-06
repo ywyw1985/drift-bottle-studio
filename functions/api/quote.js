@@ -24,7 +24,7 @@ export async function onRequestPost({ request, env }) {
         ok: true,
         emailPending: true,
         message:
-          "询价板块已预留；邮件通知会在 Resend API 配置后启用。当前请直接发送邮件到 hello@driftbottlestudio.com。",
+          "询价板块已预留；邮件通知会在 Resend API 配置后启用。当前请直接发送邮件到 driftbottlestudio@gmail.com。",
       },
       202,
     );
