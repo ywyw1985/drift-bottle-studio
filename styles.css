@@ -639,6 +639,45 @@ textarea {
   color: var(--accent);
 }
 
+.contact-section {
+  padding-block: clamp(54px, 8vw, 108px);
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(30px, 6vw, 90px);
+  padding: clamp(30px, 6vw, 76px);
+  border: 1px solid rgba(199, 164, 106, 0.48);
+  background:
+    radial-gradient(circle at top right, rgba(199, 164, 106, 0.16), transparent 46%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.contact-card h2 {
+  max-width: 760px;
+  margin: 8px 0 16px;
+}
+
+.contact-card p:last-child {
+  max-width: 660px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.contact-email {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 7px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
 .uploaded-preview {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -891,5 +930,10 @@ dialog p {
 
   .site-footer div {
     text-align: left;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 }
