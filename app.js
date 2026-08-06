@@ -27,8 +27,11 @@ const formMessages = pageLang.startsWith("en")
         success: "已收到询价，我们会尽快邮件回复。",
       };
 
-document.querySelectorAll(".work, .story-card").forEach((item) => {
-  item.addEventListener("click", () => {
+loadPortfolioOverrides().finally(initGalleries);
+
+function initGalleries() {
+  document.querySelectorAll(".work, .story-card").forEach((item) => {
+    item.addEventListener("click", () => {
     const tone = item.style.getPropertyValue("--tone");
     const gallery = (item.dataset.gallery || item.dataset.image || "")
       .split("|")
@@ -53,9 +56,74 @@ document.querySelectorAll(".work, .story-card").forEach((item) => {
       });
       strip.append(thumb);
     });
-    lightbox.showModal();
+      lightbox.showModal();
+    });
   });
-});
+}
+
+async function loadPortfolioOverrides() {
+  const workKeys = {
+    "Editorial Portrait": "portrait",
+    "Modern Wedding": "wedding",
+    "Birthday Party": "birthday-party",
+    "Game Motion": "sports",
+    "Family Memory": "family-memory",
+    "Corporate Image": "commercial",
+    "Product Color": "product",
+    "Food Story": "food",
+    "Interior Space": "interior",
+    Graduation: "graduation",
+    "Live Event": "live-event",
+    "Travel Color": "travel",
+    "Street Frame": "street",
+    "Tender Moment": "maternity-family",
+    "Color Editorial": "creative-color",
+  };
+  const storyKeys = ["portrait", "wedding", "commercial", "birthday-party", "sports", "family-memory"];
+
+  document.querySelectorAll(".work").forEach((item) => {
+    item.dataset.portfolioKey = workKeys[item.dataset.title] || "";
+  });
+  document.querySelectorAll(".story-card").forEach((item, index) => {
+    item.dataset.portfolioKey = storyKeys[index] || "";
+  });
+
+  const previewDraft = new URLSearchParams(window.location.search).get("portfolio") === "draft";
+  try {
+    const response = await fetch(`/api/portfolio${previewDraft ? "?draft=1" : ""}`, {
+      credentials: "same-origin",
+      cache: "no-store",
+    });
+    if (!response.ok) return;
+    const manifest = await response.json();
+    applyPortfolioManifest(manifest);
+  } catch {
+    // The static portfolio remains available when the optional R2 manifest cannot be loaded.
+  }
+}
+
+function applyPortfolioManifest(manifest) {
+  const categories = manifest?.categories || {};
+  document.querySelectorAll("[data-portfolio-key]").forEach((item) => {
+    const images = categories[item.dataset.portfolioKey]?.images;
+    if (!Array.isArray(images) || images.length === 0) return;
+    const urls = images.map((image) => image.url).filter(Boolean);
+    if (!urls.length) return;
+
+    item.dataset.image = urls[0];
+    item.dataset.gallery = urls.join("|");
+    item.style.setProperty("--image", `url("${urls[0]}")`);
+    const cover = item.querySelector("img");
+    if (cover) {
+      cover.src = urls[0];
+      if (images[0].alt) cover.alt = images[0].alt;
+    }
+    const count = item.querySelector("em");
+    if (count) {
+      count.textContent = pageLang.startsWith("en") ? `${urls.length} images` : `${urls.length} 张`;
+    }
+  });
+}
 
 document.querySelector(".close").addEventListener("click", () => lightbox.close());
 
