@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>照片管理后台 | Drift Bottle Studio</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <script src="/admin/admin.js" defer></script>
+  </head>
+  <body>
+    <section class="login-shell" id="loginShell" hidden>
+      <form class="login-card" id="loginForm">
+        <img src="/assets/logo-drift-bottle-photo-badge-20260803-web.png" alt="Drift Bottle Studio" />
+        <p class="eyebrow">Portfolio Manager</p>
+        <h1>照片管理后台</h1>
+        <p>输入管理员密码后，可以批量上传、排序、预览和发布照片。</p>
+        <label>
+          <span>管理员密码</span>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button class="button primary" type="submit">登录</button>
+        <p class="status" id="loginStatus" role="status"></p>
+      </form>
+    </section>
+
+    <main class="app" id="app" hidden>
+      <header class="topbar">
+        <div class="brand">
+          <img src="/assets/logo-drift-bottle-photo-badge-20260803-web.png" alt="" />
+          <div>
+            <p class="eyebrow">Drift Bottle Studio</p>
+            <h1>照片管理后台</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="button ghost" href="/" target="_blank" rel="noopener">查看网站</a>
+          <button class="button ghost" id="logoutButton" type="button">退出</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside class="sidebar">
+          <label>
+            <span>作品栏目</span>
+            <select id="categorySelect"></select>
+          </label>
+          <label>
+            <span>栏目显示名称</span>
+            <input id="categoryTitle" maxlength="100" />
+          </label>
+
+          <label class="dropzone" id="dropzone">
+            <input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" multiple />
+            <strong>拖入照片或点击选择</strong>
+            <small>支持 JPG、PNG、WebP；上传前自动缩至最长边 2400px。</small>
+          </label>
+          <div class="progress" id="progress" hidden>
+            <div id="progressBar"></div>
+          </div>
+          <p class="status" id="uploadStatus" role="status"></p>
+
+          <div class="guide">
+            <strong>排序方法</strong>
+            <p>拖动照片调整顺序；第一张自动作为网站封面。</p>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div class="content-heading">
+            <div>
+              <p class="eyebrow" id="categoryEyebrow">Selected Category</p>
+              <h2 id="categoryHeading">作品照片</h2>
+            </div>
+            <span class="save-state" id="saveState">已保存</span>
+          </div>
+          <div class="empty" id="emptyState" hidden>
+            <h3>这个栏目还没有后台照片</h3>
+            <p>上传后不会立即影响正式网站；点击“发布到网站”才会生效。</p>
+          </div>
+          <div class="photo-grid" id="photoGrid"></div>
+        </section>
+      </section>
+
+      <footer class="actionbar">
+        <p id="globalStatus" role="status"></p>
+        <div>
+          <button class="button ghost" id="saveButton" type="button">保存草稿</button>
+          <button class="button ghost" id="previewButton" type="button">预览草稿</button>
+          <button class="button primary" id="publishButton" type="button">发布到网站</button>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
