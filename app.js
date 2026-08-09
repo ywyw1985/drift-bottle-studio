@@ -132,6 +132,7 @@ function setLightboxImage(url) {
 }
 
 const sectionMap = navLinks
+  .filter((link) => link.getAttribute("href")?.startsWith("#"))
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 const sectionsByTop = sectionMap
